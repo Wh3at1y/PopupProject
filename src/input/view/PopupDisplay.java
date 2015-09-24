@@ -2,7 +2,7 @@
  * This class provides popups for input and output.
  * 
  * @Author Sam Montoya
- * Version 1.0 : 9/24/15
+ * @version Version 1.0 : 9/24/15
  */
 package input.view;
 
@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 public class PopupDisplay
 	{
 
-		public String getAnswers(String input)
+		public String getAnswer(String input)
 		{
 			String answer = "";
 			
