@@ -23,6 +23,11 @@ public class PopupController
 			int age;
 			String tempAge = myPopups.getAnswer("Type in your age");
 			
+			while(!isInteger(tempAge))
+				{
+					tempAge = myPopups.getAnswer("Type an Integer for your name please!");
+				}
+			
 			if(isInteger(tempAge))
 				{
 					age = Integer.parseInt(tempAge);
@@ -36,6 +41,11 @@ public class PopupController
 			
 			double weight;
 			String tempWeight = myPopups.getAnswer("Type in your weight");
+			
+			while(!isDouble(tempWeight))
+				{
+					tempWeight = myPopups.getAnswer("Give me a double value for your weight!");
+				}
 			
 			if(isDouble(tempWeight))
 				{
@@ -77,16 +87,22 @@ public class PopupController
 		{
 			boolean isDouble = false;
 			
+			
+			//We use try because if statement will crash, try will attempt to fix.
 			try
 				{
+					//Checks to see if it is an Double
 					double validDouble = Double.parseDouble(input);
 					isDouble = true;
 				}
 			
 			catch(NumberFormatException error)
 				{
+					//parse will only throw the NumberFormatException error, we only need 1 catch
 					myPopups.displayResponse("");
 				}
+			
+			//Once true, ends this try
 			return isDouble;
 		}
 	}

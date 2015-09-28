@@ -19,4 +19,11 @@ public class Thing
 			this.name = name;
 			this.weight = weight;
 		}
+		
+		public String toString()
+		{
+			String personInfo = "Your name is " + name + ", you are " + age + " years old and you weigh " + weight + ".";
+			
+			return personInfo;
+		}
 	}
