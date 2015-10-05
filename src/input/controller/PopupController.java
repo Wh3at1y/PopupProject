@@ -1,11 +1,19 @@
 package input.controller;
 
+/**
+ * Contains the start method, and has the main contents inside here.
+ * @author smon7958
+ */
+
 import input.view.PopupDisplay;
 import input.model.Thing;
 
 public class PopupController
 	{
-		
+		/**
+		 * Documentation section contains myPopups, an instance from PopupDisplay.
+		 * Also contains an instance from Thing.
+		 */
 		private PopupDisplay myPopups;
 		private Thing myThing;
 		
@@ -16,6 +24,9 @@ public class PopupController
 		
 		public void start()
 		{
+			/**
+			 * The starting method.
+			 */
 			String name = myPopups.getAnswer("Type in your name");
 			
 			myPopups.displayResponse("You typed " + name);
@@ -64,6 +75,12 @@ public class PopupController
 			myPopups.displayResponse(myThing.toString());
 
 		}
+		
+		/**
+		 * Checks for bad inputs and fixes them, an Exception.
+		 * @param input : the users or defined input.
+		 * @return : returns it back.
+		 */
 		
 		private boolean isInteger(String input)
 		{
